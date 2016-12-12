@@ -201,7 +201,7 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 
 \end{keyword}
 
-\cortext[cor1]{Corresponding author. Tel.: +33-634435338\\Email address: zepeng.ma@polytechnique.edu }
+\cortext[cor1]{Corresponding author. Email address: zepeng.ma@polytechnique.edu }
 
 \end{frontmatter}
 
@@ -390,16 +390,21 @@ Eq.\eqref{chabochemulti} writes equivalently as Eq.\eqref{integration}:
    \begin{equation}\delta [1-(1-D)^{\gamma+1}]^{1-\alpha}=(1-\alpha)(\gamma+1)\left(\dfrac{{A}_{\uppercase\expandafter{\romannumeral2}} }{M(\Sigma_H)}\right)^\gamma \delta N=\dfrac{1}{N_F(\sigma)}\delta N.
    \label{integration}
    \end{equation}
-Here $N_F(\sigma)$ denotes the number of cycles at intensity $\sigma$ to failure as obtained by integration of Eq.\eqref{integration} from $D=0$ to $D=1$. In our model, in case of a simple uniaxial cyclic loading, we propose to replace $\dfrac{1}{N_F(\sigma)}$ which is the relative unit increment of energy by $\dfrac{W_{cyc}}{W_F}$.
+Here $N_F(\sigma)$ denotes the number of cycles at intensity $\sigma$ to failure as obtained by integration of Eq.\eqref{integration} from $D=0$ to $D=1$. In our model, in case of a simple uniaxial cyclic loading, we propose to replace $\dfrac{1}{N_F(\sigma)}$ which is the relative unit increment of energy by $\dfrac{W_{cyc}^*}{W_F}$.
 
-In our model the yield limit evolves with time instead of stress intensity. The yield function writes:
-\begin{equation}\sigma_y=\sigma_y\left(1-D \right)^\delta
-\label{yield}
+$$W_{cyc}^*=n(D)W_{cyc}$$
+
+Assume the number of defects, meaning the number of possible occurrence of weak scales to be:
+\begin{equation}
+n(D)=n_0\dfrac{1}{\left(1-D \right)^\gamma} \quad,
+\label{defect}
 \end{equation} 
 
-Thus there is
+with $n_0$ the initial number of defects at local scale, which increases with damage increment.
+
+Thus the dissipated energy in one cycle evolves with damage $D$:
 \begin{equation}
-W_{cyc}^*=\dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{ \left[  \sigma_y\left(1-D\right)^{\delta}\right] ^{\beta-1}}
+W_{cyc}^*=\dfrac{n_0}{\left(1-D \right)^\gamma}\dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{\sigma_y^{\beta-1}}.
 \end{equation} 
 
 The nonlinear damage incremental law using energy dissipation:
@@ -407,51 +412,47 @@ The nonlinear damage incremental law using energy dissipation:
 \begin{split}
   \delta D &=\left( 1 -(1-D)^{\gamma+1}\right)^\alpha \delta W
   \\&= \left( 1 -(1-D)^{\gamma+1}\right)^\alpha \dfrac{W_{cyc}^*}{W_F}\delta N
-  \\&= \left( 1 -(1-D)^{\gamma+1}\right)^\alpha \dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{ \sigma_y^{\beta-1}\left(1-D\right)^{\delta(\beta-1)}}\dfrac{\delta N}{W_F}.
+  \\&= \left( 1 -(1-D)^{\gamma+1}\right)^\alpha \dfrac{n_0}{\left(1-D \right)^\gamma}\dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{\sigma_y^{\beta-1}}\dfrac{\delta N}{W_F}.
 \end{split}
 \label{recoverchaboche}
 \end{equation} 
 
-We compare Eq.\eqref{chabochemulti} and Eq.\eqref{recoverchaboche}, there are $\beta+1=\gamma$ and $\delta\left( \beta-1\right) =\gamma$. Then we have 
-\begin{equation}
-\delta=\dfrac{\beta+1}{\beta-1},
-\label{delta}
-\end{equation}
-\begin{equation}
-	  \delta D= \left( 1 -(1-D)^{\gamma+1}\right)^\alpha \dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{ \sigma_y^{\beta-1}\left(1-D\right)^{\beta+1}}\dfrac{\delta N}{W_F}.
-	  \label{wcycstar}
-\end{equation} 
+We compare Eq.\eqref{chabochemulti} and Eq.\eqref{recoverchaboche}, there is 
+$$\beta+1=\gamma. $$
 
 Similar to Eq.\eqref{integration}, we do the integration and get:
 \begin{equation}
 \begin{split}
-	\delta[1-(1-D)^{\gamma+1}]^{1-\alpha}&=(1-\alpha)(\gamma+1)\dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right)}\dfrac{S_{max}^{\beta+1}}{ \sigma_y^{\beta-1}}\dfrac{\delta N}{W_F}
-	\\&=(1-\alpha)(\gamma+1)\dfrac{W_{cyc}}{W_F}\delta N.
+	\delta[1-(1-D)^{\gamma+1}]^{1-\alpha}&=(1-\alpha)(\gamma+1)\dfrac{4n_0(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right)}\dfrac{S_{max}^{\beta+1}}{ \sigma_y^{\beta-1}}\dfrac{\delta N}{W_F}
+	\\&=n_0(1-\alpha)(\gamma+1)\dfrac{W_{cyc}\delta N}{W_F}.
 	\end{split}
 \label{integrationW}
 \end{equation}
 
 
-
-
-The dissipated energy is getting smaller when the material reaches the end of fatigue, because ||S-b|| projects on the yield limit in local plastic zone, and ||S-b|| is the multiplier of dW. In chaboche model, (1-D) is added to the denominator of equivalent stress, the stress intensity gets bigger with increasing number of cycles. Our model fits Chaboche law so the power of Smax and (1-D) is the same in Wcyc. In addition, it is taken into account when we put dD on one side.
-
-This is a nonlinear law but used with a constant $\alpha$, there will be no sequence effect. In other words,
- when applying two successive cycles of different intensities, the failure will occur at the same number of cycles whatever the order of the loading(high then low versus low then high).
  
 \subsection{Generalized damage accumulation}
 Formula \eqref{integration} is a general accumulation law which can be applied for any cyclic loading sequence provided that we can identify the multiscale value of the dissipated energy per cycle. 
 
 But the notion of cycle itself may be hard to identify for general loadings. The idea is then to replace the relative increment of dissipated energy per cycle by the relative increment of dissipated energy per unit time, yielding:
 \begin{equation}
-\delta [1-(1-D)^{\gamma+1}]^{1-\alpha}=\dfrac{\dot{W}}{W_F}\delta t.
+\delta [1-(1-D)^{\gamma+1}]^{1-\alpha}=n_0(1-\alpha)(\gamma+1)\dfrac{\dot{W}\delta t}{W_F}.
 \label{dt}
 \end{equation}
 
-In a general loading case, $\dot{W}$ is to be computed. By integrating Eq.\eqref{dissipated} over all microscales, we get:
+In a general loading case, $\dot{W}$ is the microscopic energy dissipation rate of unit defect. By integrating Eq.\eqref{dissipated} over all microscales, we get:
 \begin{equation}\dot{W}(M,t)=\int_{s=1}^{\infty}\dot{w}(s,M,t)P(s)ds=\int_{s=1}^{\infty}\left(\uuline{S}-\uuline{b} \right) (s,M,t):\uuline{\dot{\varepsilon}^p}(s,M,t)P(s)ds.\label{Wdot}
 \end{equation}
 The evolution of $\uuline{S}$, $\uuline{b}$ and $\uuline{\dot{\varepsilon}}^p$ are given in section 1.4. Equation \eqref{dt} and \eqref{Wdot} are therefore our proposed damage law.
+
+This is a nonlinear law with a constant $\alpha$, there will be no sequence effect. In other words,
+when applying two successive cycles of different intensities, the failure will occur at the same number of cycles whatever the order of the loading(high then low versus low then high). In numerical implementation of complex loading case, to take into account the load sequence effect, $\alpha$ changes at every time step.
+\begin{equation}
+\alpha=1-\dfrac{\dot{W}dt}{\sigma_u\left(1-\dfrac{1}{s_{min}} \right) }.
+\label{alpha}
+\end{equation}
+Where $s_{min}$ is the minimum scale that causes energy loss, meaning the deviatoric stress is greater than local yield stress: $$S_{max}>\dfrac{\sigma_y}{s_{min}},$$
+$$s_{min}=\dfrac{\sigma_y}{S_{max}}.$$
 
 \section{Loop on time and scales}
 \subsection{Integration rules for $\dot{W}$ and $\delta D$}
@@ -524,7 +525,7 @@ yielding
 \label{trial}
 \end{equation}
 We are in elastic regime at scale $s$ as long as we satisfy
-$$\left( \uline{\uline{S}}-\uline{\uline{b}}\right) (t+dt)\leqslant \sigma_y\left(1-D\right)^\delta/s.$$
+$$\left( \uline{\uline{S}}-\uline{\uline{b}}\right) (t+dt)\leqslant \sigma_y/s.$$
 
 \vspace{6pt}
 \noindent
@@ -535,7 +536,7 @@ $$\left( \uline{\uline{S}}-\uline{\uline{b}}\right) (t+dt)\leqslant \sigma_y\lef
 When we leave elastic regime at scale s, we have:
 \begin{numcases}{}
 \dot{\uline{\uline{\varepsilon}}}^p=\gamma\dfrac{\uline{\uline{S}}-\uline{\uline{b}}}{\left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|}, \gamma>0, & plastic   flow,\\
-\left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|= \sigma_y\left(1-D\right)^\delta/s, & yield   limit,\\
+\left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|= \sigma_y/s, & yield   limit,\\
 \left( \uline{\uline{S}}-\uline{\uline{b}}\right) :\left( \dot{\uline{\uline{S}}}-\dot{\uline{\uline{b}}}\right) =0, & yield   limit   time invariance,\\
 \dot{\uline{\uline{b}}}=\dfrac{kE}{E-k}\dot{\uline{\uline{\varepsilon}}}^p, & kinematic   hardening  rule,\\
 \dot{\uline{\uline{S}}}=dev\dot{\uline{\uline{\Sigma}}}-\dfrac{E}{1+\nu} \dot{\uline{\uline{\varepsilon}}}^p, & localisation  rule.
@@ -546,7 +547,7 @@ In all cases, we get(see annex 'Multi-dimensional analysis')
 \left( \uline{\uline{S}}-\uline{\uline{b}}\right) (s,t+dt)=\dfrac{\left( \uline{\uline{S}}-\uline{\uline{b}}\right)_{trial} (s,t+dt)}{1+\eta},
 \end{equation}
 
-with $$\eta=max\left\lbrace \underbrace{0}_{elastic\; regime}, \underbrace{\dfrac{\left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}}{ \sigma_y\left(1-D\right)^\delta/s}-1}_{plastic \; regime\; when\; this\; number\; is\; positive}\right\rbrace, $$
+with $$\eta=max\left\lbrace \underbrace{0}_{elastic\; regime}, \underbrace{\dfrac{\left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}}{ \sigma_y/s}-1}_{plastic \; regime\; when\; this\; number\; is\; positive}\right\rbrace, $$
 
 $$\left( \uline{\uline{S}}-\uline{\uline{b}}\right)_{trial} (s,t+dt)=\left( \uline{\uline{S}}-\uline{\uline{b}}\right)(s,t)+dev\dot{\uline{\uline{\Sigma}}}(t)dt.$$
 
@@ -554,20 +555,20 @@ $$\left( \uline{\uline{S}}-\uline{\uline{b}}\right)_{trial} (s,t+dt)=\left( \uli
  
 Knowing the distinction between elastic and plastic regime under multiple scales, we compute the general expression of the dissipated energy rate.
 \begin{equation}
-\dot{w}(s)=\left( \uline{\uline{S}}-\uline{\uline{b}}\right) :\dot{\uline{\uline{\varepsilon}}}^p=\gamma\dfrac{  \sigma_y\left(1-D\right)^\delta}{s}.
+\dot{w}(s)=\left( \uline{\uline{S}}-\uline{\uline{b}}\right) :\dot{\uline{\uline{\varepsilon}}}^p=\gamma\dfrac{  \sigma_y}{s}.
 \label{w}
 \end{equation}
 
 From Eq.\eqref{eta} and Eq.\eqref{eta2} in annex, we get:
 
-\begin{equation}E\gamma dt=\left\langle \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{ \sigma_y\left(1-D\right)^\delta}{s}\right\rangle /\left(\dfrac{1}{1+\nu}+\dfrac{k}{E-k} \right)=\left\langle \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{ \sigma_y\left(1-D\right)^\delta}{s}\right\rangle\dfrac{(E-k)(1+\nu) }{(E+k\nu)},
+\begin{equation}E\gamma dt=\left\langle \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{ \sigma_y}{s}\right\rangle /\left(\dfrac{1}{1+\nu}+\dfrac{k}{E-k} \right)=\left\langle \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{ \sigma_y}{s}\right\rangle\dfrac{(E-k)(1+\nu) }{(E+k\nu)},
 \label{gamma}
 \end{equation}
 where $\langle$ $\rangle$ is Macaulay bracket symbol defined as $\langle m\rangle=0$ if $m\leqslant0$, otherwise $\langle m\rangle=m$.
 
 We replace $\gamma$ deduced from Eq.\eqref{gamma} in Eq.\eqref{w} to give the expression of local energy dissipation rate at scale $s$:
 \begin{equation}
-\dot{w}(s)dt=\dfrac{(E-k)(1+\nu) }{E(E+k\nu)}\left\langle  \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{ \sigma_y\left(1-D\right)^\delta}{s}\right\rangle \dfrac{ \sigma_y\left(1-D\right)^\delta}{s}.
+\dot{w}(s)dt=\dfrac{(E-k)(1+\nu) }{E(E+k\nu)}\left\langle  \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{ \sigma_y}{s}\right\rangle \dfrac{ \sigma_y}{s}.
 \label{dW}
 \end{equation}
 
@@ -577,7 +578,7 @@ With Eq.\eqref{allscalerate}, the final expression of energy dissipation $W$ dur
 \begin{split}
 W&=\dot{W}dt
 \\&=\frac{1}{2}\sum_{i}\omega_i\dot{w}\left[  \left( \frac{x+1}{2}\right) ^{\frac{1}{1-\beta}}\right]dt
-\\&=\dfrac{(E-k)(1+\nu) }{2E(E+k\nu)}\sum_{i}\omega_i\left\langle  \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{\sigma_y(1-D)^\delta M(\sigma_H)}{\left( \dfrac{x_i+1}{2}\right) ^{\frac{1}{1-\beta}}}\right\rangle \dfrac{\sigma_y(1-D)^\delta M(\sigma_H)}{\left( \dfrac{x_i+1}{2}\right)^{\frac{1}{1-\beta}}}.
+\\&=\dfrac{(E-k)(1+\nu) }{2E(E+k\nu)}\sum_{i}\omega_i\left\langle  \left| \left|\uline{\uline{S}}-\uline{\uline{b}}\right| \right|_{trial}-\dfrac{\sigma_y M(\sigma_H)}{\left( \dfrac{x_i+1}{2}\right) ^{\frac{1}{1-\beta}}}\right\rangle \dfrac{\sigma_y M(\sigma_H)}{\left( \dfrac{x_i+1}{2}\right)^{\frac{1}{1-\beta}}}.
 \end{split}
 \label{finaldw}
 \end{equation}
@@ -586,14 +587,14 @@ The mean stress effect term in Chaboche model is $s_{-1}\left(1-3\dfrac{\sigma_H
 
 
 We have the damage accumulation deduced in Eq.\eqref{damage}:
-$$g_{n+1}=g_n+(1-\alpha)(\gamma+1)\dfrac{\dot{W}dt}{W_F}=g_n+(1-\alpha)(\gamma+1)\dfrac{W}{W_F},$$
+$$g_{n+1}=g_n+n_0(1-\alpha)(\gamma+1)\dfrac{\dot{W}dt}{W_F}=g_n+n_0(1-\alpha)(\gamma+1)\dfrac{W}{W_F},$$
 with $g_n=\left[ 1-\left( 1-D_{n}\right)^{\gamma+1} \right]^{1-\alpha}$, thus $D_n=\left[1-\left(1-g_n^{\frac{1}{1-\alpha}} \right)^{\frac{1}{\gamma+1}}  \right]$.
  
  Now we are able to put these formula into numerical tests.
  
 \section{Test on different load histories}
 \subsection{One dimensional application to simple cyclic data}
-The test is first performed on a sinusoidal axial load $\Sigma=Csin(t)$ with parameters in Table.\ref{Sin}, giving a deviatoric amplitude $S_{max}=\sqrt{\dfrac{2}{3}}Csin(t)$.
+The test is first performed on a sinusoidal axial load $\Sigma=Csin(t)$ with parameters in Table.\ref{Sin}, giving a deviatoric amplitude $S_{max}=dev\Sigma=\sqrt{\dfrac{2}{3}}Csin(t)$.
 \begin{table}[!h]
 	\centering
 	\begin{tabular}{ll}
@@ -616,7 +617,7 @@ The test is first performed on a sinusoidal axial load $\Sigma=Csin(t)$ with par
 		\label{Sin}
 \end{table}
 
-We use matlab to realize our analytical method. We plot $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}$ and $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|$ at two different scales($s_1=21.21657929229650$ and $s_8=2.176132808422946$) in \figref{trialsin}.
+We use matlab to realize our analytical method. We plot $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}$ and $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|$ at two different scales($s_33=4.20$ and $s_40=9.68$) in \figref{trialsin}.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=\textwidth]{figures//trialsin.png} 
@@ -624,9 +625,7 @@ We use matlab to realize our analytical method. We plot $\left\|  \uline{\uline{
 	\label{trialsin}
 \end{figure}
 
-The nonlinearity is determined by 
-$$\alpha=1 - a\left\langle \dfrac{\max\limits_{t}\sqrt{J_{2,a}}(t)+a_c{P_{max}(t)}-b_c}{ \sigma_{u} - 2\max\sqrt{J_{2,a}}}\right\rangle,$$ 
- which is predominated by a certain fatigue criterion, for simplicity we take $\alpha$ as a constant. The damage evolves like in \figref{damsin}, where we compare the damage evolution as predicted by the cycle accumulation Eq.\eqref{eq:w} and by the numerical strategy of section 4.
+The damage evolves like in \figref{damsin}, where we compare the damage evolution as predicted by the cycle accumulation Eq.\eqref{eq:w} and by the numerical strategy of section 4.
 
 \begin{figure}[!h]
 	\centering
@@ -728,7 +727,7 @@ In this test, we reconstruct a unidimensional macroscopic stress history from re
 
 The sample recording rate is 256 per second. In order to accumulate damage using small steps, we have created 1 additional points between every 2 recorded points by linear interpolation. So the sample rate is $256*2$ per second. 
 
-The force on wheel is firstly considered as under uniaxial loading $F_x$. Here we temporally set $\Sigma_x=F_x/A$ where $A=\dfrac{1}{1e6} m^2$ is the area of force, and $W_F=3e6 J$. The other data are as Table.\ref{Sin}. The plot of $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}$ and $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|$ at 2 different scales($s_1=21.21657929229650$ and $s_8=2.176132808422946$)are shown in \figref{trialreal}. The damage evolves like \figref{damage1d}.
+The force on wheel is firstly considered as under uniaxial loading $F_x$. Here we temporally set $\Sigma_x=F_x/A$ where $A=\dfrac{1}{1e6} m^2$ is the area of force, and $W_F=3e6 J$. The other data are as Table.\ref{Sin}. The plot of $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}$ and $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|$ at 2 different scales are shown in \figref{trialreal}. The damage evolves like \figref{damage1d}.
 
 \begin{figure}[!h]
 	\centering
@@ -805,7 +804,7 @@ The force on wheel is firstly considered as under uniaxial loading $F_x$. Here w
 
 
 
-In the load history, when $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}>\sigma_y$, the damage accumulates. However, under scale $s_{8}$, there are much less damage accumulation than under scale $s_1$.  In this way we do not neglect the small influences in load history and the big fluctuation in stress is magnified which reflects the real situation. 
+In the load history, when $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}>\sigma_y$, the damage accumulates. However, at scale $s_{8}$, there are much less damage accumulation than at scale $s_1$.  In this way we do not neglect the small influences in load history and the big fluctuation in stress is magnified which reflects the real situation. 
 
 %\iffalse
 The damage evolves like in \figref{dam3d}. 
@@ -882,9 +881,9 @@ We are grateful for the financial and technical support of Chaire PSA.
 	\input{apendices//EXPLOITATION}
     \input{apendices//REGIME}
    	\input{apendices//3DTENSOR}    
-   	\section{MATLAB CODE LISTING}
-  	\input{apendices//SINUSOIDALCODE}
-   	\input{apendices//3DCODE}
+%   	\section{MATLAB CODE LISTING}
+%    	\input{apendices//SINUSOIDALCODE}
+%   	\input{apendices//3DCODE}
 \end{subappendices}
 
 \end{document}
