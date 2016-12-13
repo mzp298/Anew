@@ -226,8 +226,9 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 			$k=500\sim800MPa$ & hardening parameter &  &  &  \\
 			$\beta=1\sim50$ & weakening scales distribution exponent  &  &  &  \\
 			$\gamma=0\sim50$ & material parameter from Chaboche law(Wohler curve exponent)  &  &  &  \\
-			$\alpha=1 - a\left\langle \dfrac{\max\limits_{t}\sqrt{J_{2,a}}(t)+a_c{P_{max}(t)}-b_c}{ \sigma_{u} - 2\max\sqrt{J_{2,a}}}\right\rangle$ & characterizes non-linearity of damage accumulation &  &  &  \\
+			$\alpha=1 - a\left\langle \dfrac{\dfrac{1}{2}\sigma_{vm}(t)-\sigma_{-1}\left(1-3c\sigma_{H,max}(t) \right) }{\sigma_{u} -\sigma_{vm}(t)}\right\rangle$ & characterizes non-linearity of damage accumulation(c is constant) &  &  &  \\
 			$a$ & material parameter from Chaboche law &  &  &  \\
+			$M_0 $ & material parameter in Chaboche law &  &  &  \\
 			$\sigma_{y}$ & macroscopic yield stress(normal or shear) &  &  &  \\
 			$\lambda=0\sim5$& hydrostatic pressure sensitivity &  &  &  \\
 			$\uline{\uline{S}}=dev\dot{\uline{\uline{\Sigma}}}$ & deviatoric part of the stress tensor &  &  &  \\
@@ -380,11 +381,13 @@ However, experiments shows that the damage or the energy accumulation of a mater
 \subsection{Energy approach with Chaboche law}
 The Chaboche law\cite{lemaitre1990mechanics} is essentially a damage incremental law for cyclic loading of stress intensity $\sigma$ with a deviatoric part ${A}_{\uppercase\expandafter{\romannumeral2}}$ and hydrostatic part $\Sigma_H$, defining the damage increase by:
 
- \begin{equation}\delta D = \left( 1 -(1-D)^{\gamma+1}\right)^\alpha \left(\frac{{A}_{\uppercase\expandafter{\romannumeral2}}/\left( 1-D\right) }{M(\Sigma_H)}\right)^\gamma \delta N
+ \begin{equation}\delta D = \left( 1 -(1-D)^{\gamma+1}\right)^\alpha \left(\frac{{A}_{\uppercase\expandafter{\romannumeral2}} }{M(\sigma_H)\left( 1-D\right)}\right)^\gamma \delta N
  \label{chabochemulti}
  \end{equation} 
  
-With ${A}_{\uppercase\expandafter{\romannumeral2}}^*={A}_{\uppercase\expandafter{\romannumeral2}}/\left( 1-D\right) $ evolving with damage $D$. 
+With ${A}_{\uppercase\expandafter{\romannumeral2}}^*={A}_{\uppercase\expandafter{\romannumeral2}}/\left( 1-D\right) $ evolving with damage $D$. And the mean stress effect is in both exponential $\alpha$ and denominator $M(\sigma_H)$.
+$$\alpha=1 - a\left\langle \dfrac{\dfrac{1}{2}\sigma_{vm}(t)-\sigma_{-1}\left(1-3c\sigma_{H,max}(t) \right) }{\sigma_{u} -\sigma_{vm}(t)}\right\rangle,$$
+$$M(\sigma_H) =M_0 \left(1-3c\sigma_{H,max}(t) \right).$$
  
 Eq.\eqref{chabochemulti} writes equivalently as Eq.\eqref{integration}:
    \begin{equation}\delta [1-(1-D)^{\gamma+1}]^{1-\alpha}=(1-\alpha)(\gamma+1)\left(\dfrac{{A}_{\uppercase\expandafter{\romannumeral2}} }{M(\Sigma_H)}\right)^\gamma \delta N=\dfrac{1}{N_F(\sigma)}\delta N.
@@ -453,6 +456,7 @@ when applying two successive cycles of different intensities, the failure will o
 \end{equation}
 Where $s_{min}$ is the minimum scale that causes energy loss, meaning the deviatoric stress is greater than local yield stress: $$S_{max}>\dfrac{\sigma_y}{s_{min}},$$
 $$s_{min}=\dfrac{\sigma_y}{S_{max}}.$$
+which will change over time in loading history, we can now use numerical method to verify our analysis in 1-D cyclic loading.
 
 \section{Loop on time and scales}
 \subsection{Integration rules for $\dot{W}$ and $\delta D$}
@@ -707,7 +711,7 @@ Dissipated energy to failure per unit volume                & $W_F=1.657e8$ J   
 	\caption{Parameters identification on 30NCD16 steel in bending}
 \label{tab:parameters}
 \end{table}
-Applying $W_{cyc}=\dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{ \sigma_y^{\beta-1}}$ to pure bending and torsion test we can  find the value of $W_F$ and $\beta$ as shown in \figref{30NCD60noH}.
+Applying $W_{cyc}=\dfrac{4(E-k)(1+\nu)\left( \beta-1\right) }{ E(E+k\nu)\beta\left( \beta+1\right) }\dfrac{S_{max}^{\beta+1}}{ \sigma_y^{\beta-1}}$ to pure bending and torsion test we can  find the value of $W_F$ and $\beta$ as depicted in \figref{30NCD60noH}.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures//30NCD60noH.png} 
