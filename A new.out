@@ -10,12 +10,16 @@
 \BOOKMARK [1][-]{section.4}{Loop\040on\040time\040and\040scales}{}% 10
 \BOOKMARK [2][-]{subsection.4.1}{Integration\040rules\040for\040\040and\040D}{section.4}% 11
 \BOOKMARK [2][-]{subsection.4.2}{Regime\040determination\040under\040multiple\040scales}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{Test\040on\040different\040load\040histories}{}% 13
-\BOOKMARK [2][-]{subsection.5.1}{One\040dimensional\040application\040to\040simple\040cyclic\040data}{section.5}% 14
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Parameter\040identification\040on\04030NCD16\040steel}{subsection.5.1}% 15
-\BOOKMARK [2][-]{subsection.5.2}{One\040dimensional\040application\040to\040PSA\040data}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Multi-dimensional\040application\040to\040PSA\040data}{section.5}% 17
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 18
-\BOOKMARK [1][-]{Item.6}{Reference}{}% 19
-\BOOKMARK [1][-]{Item.6}{Appendices}{}% 20
-\BOOKMARK [1][-]{Appendix .A}{DETAILED\040EXPLOITATION}{}% 21
+\BOOKMARK [1][-]{section.5}{Method\040verification}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{One\040dimensional\040application\040to\040simple\040cyclic\040data\(from\040Cetim\)}{section.5}% 14
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Sequence\040effect}{subsection.5.1}% 15
+\BOOKMARK [1][-]{section.6}{Experimental\040verification}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Parameter\040identification\040on\04030NCD16\040steel}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Sinusoidal\0401D\040data\040from\040Cetim}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Random\0401D\040data\040from\040Cetim}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.4}{1D\040data\040from\040PSA}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.5}{Multi-dimensional\040application\040to\040PSA\040data}{section.6}% 21
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 22
+\BOOKMARK [1][-]{Item.6}{Reference}{}% 23
+\BOOKMARK [1][-]{Item.6}{Appendices}{}% 24
+\BOOKMARK [1][-]{Appendix .A}{DETAILED\040EXPLOITATION}{}% 25
