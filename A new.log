@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2015.4.2)  23 JAN 2017 17:40
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2015.4.2)  5 APR 2017 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -556,6 +556,12 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 137.
 LaTeX Info: Redefining \bm on input line 203.
 )
+(c:/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks24
+\verbatim@line=\toks25
+\verbatim@in@stream=\read1
+)
 (c:/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
@@ -586,7 +592,7 @@ fi \vskip \belowcaptionskip .
 \UL@box=\box33
 \UL@hyphenbox=\box34
 \UL@skip=\skip54
-\UL@hook=\toks24
+\UL@hook=\toks26
 \UL@height=\dimen149
 \UL@pe=\count122
 \UL@pixel=\dimen150
@@ -751,7 +757,7 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \aftertitleunit=\skip63
 \ttl@plus=\dimen158
 \ttl@minus=\dimen159
-\ttl@toksa=\toks25
+\ttl@toksa=\toks27
 \titlewidth=\dimen160
 \titlewidthlast=\dimen161
 \titlewidthfirst=\dimen162
@@ -769,7 +775,7 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 (c:/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count142
 \lst@gtempboxa=\box38
-\lst@token=\toks26
+\lst@token=\toks28
 \lst@length=\count143
 \lst@currlwidth=\dimen163
 \lst@column=\count144
@@ -979,8 +985,8 @@ LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
 File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 \tipaTiiicode=\count183
-\tipasavetokens=\toks27
-\tipachecktokens=\toks28
+\tipasavetokens=\toks29
+\tipachecktokens=\toks30
 )
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -1144,8 +1150,8 @@ ts
 \subsupersep=\dimen201
 ) (c:/texlive/2014/texmf-dist/tex/latex/metalogo/metalogo.sty
 Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
-\xl@everylogo=\toks29
-\xl@@everylogo=\toks30
+\xl@everylogo=\toks31
+\xl@@everylogo=\toks32
 LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
@@ -1171,11 +1177,11 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Normal \dimen register pool exhausted, switching to extended pool.
 \col@sep=\dimen256
 \extrarowheight=\dimen257
-\NC@list=\toks31
+\NC@list=\toks33
 \extratabsurround=\skip70
 \backup@length=\skip71
 )
-\everycr=\toks32
+\everycr=\toks34
 \minrowclearance=\skip72
 )
 \rownum=\count185
@@ -1243,8 +1249,8 @@ put line 308.
 \dayofyear=\count285
 \dayofweek=\count286
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks33
-\dt@b=\toks34
+\dt@a=\toks35
+\dt@b=\toks36
 )
 (c:/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen258
@@ -1257,7 +1263,7 @@ Package: tabularx 2014/05/13 v2.10 `tabularx' package (DPC)
 \TX@target=\dimen262
 \TX@delta=\dimen263
 \TX@cols=\count287
-\TX@ftn=\toks35
+\TX@ftn=\toks37
 )
 (c:/texlive/2014/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
@@ -1272,80 +1278,62 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \rotFPtop=\skip73
 \rotFPbot=\skip74
 \rot@float@box=\box56
-\rot@mess@toks=\toks36
+\rot@mess@toks=\toks38
 ) (./A new.aux
 
 LaTeX Warning: Label `sequence' multiply defined.
 
-
-LaTeX Warning: Label `:a' multiply defined.
-
-
-LaTeX Warning: Label `sub@:a' multiply defined.
-
-
-LaTeX Warning: Label `:b' multiply defined.
-
-
-LaTeX Warning: Label `sub@:b' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `eta' multiply defined.
-
 )
 \openout1 = `"A new.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 136.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 136
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 137.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 137
 .
  (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 136
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 137.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 137
 .
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 136
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 137.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 137
 .
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 136.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 137.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 137.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 136.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 136.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 137.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 137.
 
 (c:/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    ... okay on input line 137.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1390,7 +1378,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring ON on input line 136.
+Package hyperref Info: Link coloring ON on input line 137.
 (c:/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1399,9 +1387,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count289
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
 
 (./A new.out) (./A new.out)
 \@outlinefile=\write4
@@ -1415,85 +1403,85 @@ LaTeX Info: Redefining \nameref on input line 136.
 .................................................
 \symlegacymaths=\mathgroup14
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 136.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 136.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 136.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 136.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 136.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 136.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 136.
-LaTeX Font Info:    Redeclaring math accent \check on input line 136.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 136.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 136.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 136.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 136.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 136.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 137.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 137.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 137.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 137.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 137.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 137.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 137.
+LaTeX Font Info:    Redeclaring math accent \check on input line 137.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 137.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 137.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 137.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 137.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 136.
+(Font)              `operators' in the math version `normal' on input line 137.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/txr/m/n --> EU1/lmr/m/n on input line 136.
+(Font)                  OT1/txr/m/n --> EU1/lmr/m/n on input line 137.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 136.
+(Font)              `operators' in the math version `bold' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/txr/bx/n --> EU1/lmr/m/n on input line 136.
+(Font)                  OT1/txr/bx/n --> EU1/lmr/m/n on input line 137.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 136.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 136.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/txr/m/it --> EU1/lmr/m/it on input line 136.
+(Font)                  OT1/txr/m/it --> EU1/lmr/m/it on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/txr/bx/n --> EU1/lmr/bx/n on input line 136.
+(Font)                  OT1/txr/bx/n --> EU1/lmr/bx/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/txss/m/n --> EU1/lmss/m/n on input line 136.
+(Font)                  OT1/txss/m/n --> EU1/lmss/m/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/txtt/m/n --> EU1/lmtt/m/n on input line 136.
+(Font)                  OT1/txtt/m/n --> EU1/lmtt/m/n on input line 137.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 136.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 136.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/txr/bx/it --> EU1/lmr/bx/it on input line 136.
+(Font)                  OT1/txr/bx/it --> EU1/lmr/bx/it on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/txss/b/n --> EU1/lmss/bx/n on input line 136.
+(Font)                  OT1/txss/b/n --> EU1/lmss/bx/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/txtt/b/n --> EU1/lmtt/bx/n on input line 136.
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 207.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 207.
+(Font)                  OT1/txtt/b/n --> EU1/lmtt/bx/n on input line 137.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 208.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 208.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 207.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 208.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 207.
+LaTeX Font Info:    Try loading font information for U+msa on input line 208.
 
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 207.
+LaTeX Font Info:    Try loading font information for U+msb on input line 208.
 
 (c:/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 207.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 208.
 
 
 (c:/texlive/2014/texmf-dist/tex/latex/txfonts/utxsyc.fd
@@ -1501,17 +1489,17 @@ File: utxsyc.fd 2000/12/15 v3.1
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 207.
+(Font)              size <12> substituted on input line 208.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 207.
+(Font)              size <6> substituted on input line 208.
 
-LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 207
+LaTeX Font Info:    Calculating math sizes for size <9.09996> on input line 208
 .
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.54997> not available
-(Font)              size <5> substituted on input line 207.
+(Font)              size <5> substituted on input line 208.
 
 File: elsevier-logo-3p.pdf Graphic file (type QTm)
 <use  "elsevier-logo-3p.pdf" >
@@ -1536,15 +1524,20 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 ) [1
 
 ]
-Overfull \hbox (63.77495pt too wide) in paragraph at lines 214--242
+Overfull \hbox (63.77495pt too wide) in paragraph at lines 215--243
 [][] 
  []
 
 [2
 
 ]
-File: figures//ps.png Graphic file (type QTm)
- <use  "figures//ps.png" >
+File: figures//ps1.png Graphic file (type QTm)
+ <use  "figures//ps1.png" >
+File: figures//ps2.png Graphic file (type QTm)
+ <use  "figures//ps2.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1552,71 +1545,67 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [4]
 File: figures//backstress.png Graphic file (type QTm)
- <use  "figures//backstress.png" >
+ <use  "figures//backstress.png" > [5] [6] [7]
+File: figures//Dhat.png Graphic file (type QTm)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use  "figures//Dhat.png" > [8] [9] [10]
 
-[5] [6] [7] [8]
+LaTeX Warning: Reference `diffform' on page 11 undefined on input line 540.
+
 File: figures//sequence.png Graphic file (type QTm)
- <use  "figures//sequence.png" >
+<use  "figures//sequence.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 532.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 532.
+(hyperref)                removing `math shift' on input line 574.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 532.
+(hyperref)                removing `math shift' on input line 574.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 532.
+(hyperref)                removing `math shift' on input line 574.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 532.
+(hyperref)                removing `\delta' on input line 574.
 
-[10] [11] [12]
-Overfull \hbox (23.20934pt too wide) in paragraph at lines 628--629
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 574.
+
+[11]
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
+ [12]
+[13]
+Overfull \hbox (23.20934pt too wide) in paragraph at lines 673--674
 [][] \OT1/cmr/m/n/10 (\OML/txmi/m/it/10 s; t\OT1/cmr/m/n/10 )$\EU1/lmr/m/n/10 .
  Otherwise, if the norm of $[][] \OT1/cmr/m/n/10 (\OML/txmi/m/it/10 s; t\OT1/cm
 r/m/n/10 )$ \EU1/lmr/m/n/10 is greater than the local yield limit $[] [][] \OT1
 /cmr/m/n/10 /\OML/txmi/m/it/10 s$\EU1/lmr/m/n/10 ,
  []
 
-[13]
+[14] [15]
 File: figures//trialsin.png Graphic file (type QTm)
- <use  "figures//trialsin.png" >
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ <use  "figures//trialsin.png" > [16]
 File: figures//damagesin.png Graphic file (type QTm)
+
 <use  "figures//damagesin.png" >
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: figures//Damagediff.png Graphic file (type QTm)
-<use  "figures//Damagediff.png" >
+ <use  "figures//Damagediff.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14]
-
-LaTeX Warning: Text page 15 contains only floats.
-
-[15]
+[17]
 File: figures//high-low-Smax.png Graphic file (type QTm)
  <use  "figures//high-low-Smax.png" >
 File: figures//low-high-Smax.png Graphic file (type QTm)
  <use  "figures//low-high-Smax.png" >
-Overfull \hbox (31.6063pt too wide) in paragraph at lines 727--730
+Overfull \hbox (31.6063pt too wide) in paragraph at lines 770--773
 []|   | [][]| [][]|  
  []
 
@@ -1624,74 +1613,96 @@ File: figures//high-low-D.png Graphic file (type QTm)
 <use  "figures//high-low-D.png" >
 File: figures//low-high-D.png Graphic file (type QTm)
  <use  "figures//low-high-D.png" >
-Overfull \hbox (37.8263pt too wide) in paragraph at lines 730--734
+Overfull \hbox (37.8263pt too wide) in paragraph at lines 773--777
 []|  [][]|  [][]|  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16]
+[18] [19]
+File: figures//alpha_change_with_time.png Graphic file (type QTm)
+ <use  "figures//alpha_change_with_time.png" >
+File: figures//aluminum_cetim.png Graphic file (type QTm)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use  "figures//aluminum_cetim.png" > [20
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+] [21]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 778.
+               Default added (so using `tbp') on input line 850.
+
+File: figures//ep_06_stress.png Graphic file (type QTm)
+<use  "figures//ep_06_stress.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (8.9111pt too wide) in paragraph at lines 780--789
- [][] 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: figures//ep_01_damage.png Graphic file (type QTm)
-<use  "figures//ep_01_damage.png" >
-File: figures//ep_02_damage.png Graphic file (type QTm)
- <use  "figures//ep_02_damage.png" >
-Overfull \hbox (31.08441pt too wide) in paragraph at lines 798--801
+[22]
+File: figures//alpha.png Graphic file (type QTm)
+ <use  "figures//alpha.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 3407) has occurred while \output is active []
+
+ [23]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[24] [25] [26]
+File: figures//SNb.png Graphic file (type QTm)
+ <use  "figures//SNb.png" >
+File: figures//SNlam.png Graphic file (type QTm)
+ <use  "figures//SNlam.png" >
+Overfull \hbox (4.23093pt too wide) in paragraph at lines 994--997
 []|   | [][]| [][]|  
  []
 
-[17]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[18]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 806.
-
-File: figures//ep_03_stress.png Graphic file (type QTm)
-<use  "figures//ep_03_stress.png" >
-File: figures//ep_03_damage.png Graphic file (type QTm)
- <use  "figures//ep_03_damage.png" >
-Overfull \hbox (31.08441pt too wide) in paragraph at lines 830--833
-[]|   | [][]| [][]|  
- []
-
-File: figures//ep_04_1_stress.png Graphic file (type QTm)
-<use  "figures//ep_04_1_stress.png" >
-File: figures//ep_04_1_damage.png Graphic file (type QTm)
- <use  "figures//ep_04_1_damage.png" >
-Overfull \hbox (35.08441pt too wide) in paragraph at lines 833--836
+File: figures//SNa.png Graphic file (type QTm)
+<use  "figures//SNa.png" >
+File: figures//SNWF.png Graphic file (type QTm)
+ <use  "figures//SNWF.png" >
+Overfull \hbox (8.23093pt too wide) in paragraph at lines 997--1000
 []|  [][]|  [][]|  
  []
 
-File: figures//ep_04_2_stress.png Graphic file (type QTm)
-<use  "figures//ep_04_2_stress.png" >
-File: figures//ep_04_2_damage.png Graphic file (type QTm)
- <use  "figures//ep_04_2_damage.png" >
-Overfull \hbox (37.30441pt too wide) in paragraph at lines 836--840
-[]|  [][]|  [][]|  [] 
- []
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19] [20] [21] (./A new.bbl
+File: figures//sequence_ours.png Graphic file (type QTm)
+<use  "figures//sequence_ours.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[27
+
+]
+File: figures//Cetim_err.png Graphic file (type QTm)
+ <use  "figures//Cetim_err.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1028.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sigma' on input line 1028.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1028.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1028.
+
+[28] [29] [30] (./A new.bbl
 LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 15.
 
 
@@ -1704,39 +1715,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
  [][][][][][][][][][][][] []
  []
 
-) [22
+) [31
 
-] (./apendices//EXPLOITATION.tex [23
+] (./apendices//EXPLOITATION.tex [32
 
-] [24]) (./apendices//REGIME.tex
-[25]) (./apendices//3DTENSOR.tex [26
-
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 995.
- [27
+] [33]) (./apendices//REGIME.tex
+[34])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1193.
+ [35
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 995.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1193.
  (./A new.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 995.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 995.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1193.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1193.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 995.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1193.
  ) 
 Here is how much of TeX's memory you used:
- 27575 strings out of 493734
- 477929 string characters out of 6149469
- 574201 words of memory out of 5000000
- 30517 multiletter control sequences out of 15000+600000
+ 27606 strings out of 493734
+ 478457 string characters out of 6149469
+ 580891 words of memory out of 5000000
+ 30546 multiletter control sequences out of 15000+600000
  49277 words of font info for 177 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 42i,20n,51p,10422b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,20n,48p,10422b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on A new.pdf (27 pages).
+Output written on A new.pdf (35 pages).
