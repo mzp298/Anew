@@ -2,52 +2,69 @@ This is BibTeX, Version 0.99d (TeX Live 2014/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: A new.aux
 The style file: elsarticle-num.bst
-Illegal, another \bibstyle command---line 169 of file A new.aux
+Illegal, another \bibstyle command---line 278 of file A new.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
 Database file #1: 11.bib
 Warning--entry type for "zepeng" isn't style-file defined
 --line 39 of file 11.bib
-You've used 5 entries,
+Warning--entry type for "VIDAL1996" isn't style-file defined
+--line 153 of file 11.bib
+Warning--I didn't find a database entry for "lee1989out"
+Warning--I didn't find a database entry for "Bedkowski_1994"
+Warning--empty publisher in dieter1961mechanical
+Warning--empty journal in Bedkowski1994
+Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
+while executing---line 1495 of file elsarticle-num.bst
+Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
+while executing---line 1495 of file elsarticle-num.bst
+Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
+while executing---line 1495 of file elsarticle-num.bst
+Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
+while executing---line 1495 of file elsarticle-num.bst
+Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
+while executing---line 1495 of file elsarticle-num.bst
+Warning--empty journal in ACHTELIC1994
+You've used 13 entries,
             2937 wiz_defined-function locations,
-            701 strings with 6094 characters,
-and the built_in function-call counts, 1290 in all, are:
-= -- 116
-> -- 29
+            755 strings with 7772 characters,
+and the built_in function-call counts, 3002 in all, are:
+= -- 261
+> -- 67
 < -- 0
-+ -- 13
-- -- 8
-* -- 83
-:= -- 178
-add.period$ -- 7
-call.type$ -- 5
-change.case$ -- 5
++ -- 31
+- -- 18
+* -- 170
+:= -- 407
+add.period$ -- 15
+call.type$ -- 13
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 41
-empty$ -- 163
-format.name$ -- 11
-if$ -- 342
+cite$ -- 16
+duplicate$ -- 95
+empty$ -- 386
+format.name$ -- 22
+if$ -- 799
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 4
-newline$ -- 27
-num.names$ -- 4
-pop$ -- 39
+int.to.str$ -- 13
+missing$ -- 11
+newline$ -- 52
+num.names$ -- 12
+pop$ -- 94
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 85
+skip$ -- 216
 stack$ -- 0
-substring$ -- 50
-swap$ -- 8
+substring$ -- 135
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 6
-width$ -- 6
-write$ -- 49
-(There was 1 error message)
+warning$ -- 3
+while$ -- 18
+width$ -- 15
+write$ -- 106
+(There were 6 error messages)

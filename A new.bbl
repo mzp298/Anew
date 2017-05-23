@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -37,5 +37,44 @@ J.~Lemaitre, J.-L. Chaboche, Mechanics of solid materials, Cambridge university
 {Legendre Gauss Quadrature weights and nodes},
   \url{https://www.mathworks.com/matlabcentral/fileexchange/4540-legendre-gauss-quadrature-weights-and-nodes},
   accessed: 2004-05-11.
+
+\bibitem{dieter1961mechanical}
+G.~DIETER, MECHANICAL METALLURGY, 1961.
+
+\bibitem{Dubar1992}
+L.~DUBAR, Fatigue multiaxiale des aciers - passage de l’endurance à
+  l’endurance limitée -prise en compte des accidents géométriques., Thèse
+  de Doctorat,Ecole Nationale Supérieure d’Arts et Métiers, Talence,
+  France.
+
+\bibitem{lee2013out}
+S.-B. Lee, Out-of-phase combined bending and torsion fatigue of steels,
+  ICBMFF2.
+
+\bibitem{Bedkowski1994}
+W.~Bedkowski, Determination of the critical plane and effort criterion in
+  fatigue life evaluation for materials under multiaxial random loading.
+  experimental verification based on fatigue tests of cruciform specimens
+  (1994) s.435–447.
+
+\bibitem{ACHTELIC1994}
+B.~W. G. J. M.~E. ACHTELIC, H., Fatigue life of 10hnap steel under synchronous
+  random bending and torsion. (1994) 421–434.
+
+\bibitem{VIDAL1996}
+E.~VIDAL, Prévision de la durée de vie en fatigue multiaxiale sous
+  sollicitations d’amplitude variable à l’aide d’un critère global.
+
+\bibitem{jabbado:pastel-00002116}
+M.~Jabbado,
+  \href{https://pastel.archives-ouvertes.fr/pastel-00002116}{{High-Cycle
+  Fatigue of Metallic Structures : Lifetime Duration under Variable
+  Loadings.}}, Theses, {Ecole Polytechnique X} (Mar. 2006).
+\newline\urlprefix\url{https://pastel.archives-ouvertes.fr/pastel-00002116}
+
+\bibitem{carpinteri2003multiaxial}
+A.~Carpinteri, A.~Spagnoli, S.~Vantadori, A multiaxial fatigue criterion for
+  random loading, Fatigue \& Fracture of Engineering Materials \& Structures
+  26~(6) (2003) 515--522.
 
 \end{thebibliography}
