@@ -7,10 +7,31 @@ M=1e8;
 D=0:0.01:1;
 
 N=(1 - (1 - D).^(b + 1)).^(1-a)*(A/M).^-b/(1+b)/(1-a);
-plot(N,D);
-title('D-N curve');
+plot(N,D,'LineStyle', '-','LineWidth', 5);
 xlabel('Number of cycles N');
 ylabel('Damage D');
+% % ---------------------plot settings-----------------------------
+grid on;
+grid minor;
+set(gca ,'FontSize',35);
+hXLabel = xlabel('Number of cycles');
+ hYLabel =ylabel('D');
+ % Adjust font
+set(gca, 'FontName', 'Helvetica')
+set([hXLabel, hYLabel], 'FontName', 'AvantGarde')
+set([hXLabel, hYLabel], 'FontSize', 35)
 
+set(gca, 'Box', 'off', 'TickDir', 'out', 'TickLength', [.02 .02], ...
+    'XMinorTick', 'on', 'YMinorTick', 'on', 'YGrid', 'on', ...
+    'XColor', [.3 .3 .3], 'YColor', [.3 .3 .3], ...
+    'LineWidth', 1)
+set(gcf,'color','w'); %set figure background transparent
+set(gca,'color','w'); %set axis transparent
+% Maximize print figure
+set(gcf,'outerposition',get(0,'screensize'));
+set(gcf, 'PaperPositionMode', 'manual');
+set(gcf, 'PaperUnits', 'points'); %[ {inches} | centimeters | normalized | points ]
+set(gcf, 'PaperPosition', [0 0 1280 800]); %set(gcf,'PaperPosition',[left,bottom,width,height])
+saveas(gcf,'F:\Git\Doctor_thesis_Zepeng\figures\D-N.png');
 
 

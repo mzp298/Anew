@@ -5,6 +5,89 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{van1973khmu}
+D.~N. Van, The khmu in viet nam, Vietnamese studies 36~(2) (1973) 62--140.
+
+\bibitem{papadopoulos2001long}
+I.~V. Papadopoulos, Long life fatigue under multiaxial loading, International
+  Journal of Fatigue 23~(10) (2001) 839--849.
+
+\bibitem{crossland1956effect}
+B.~Crossland, Effect of large hydrostatic pressures on the torsional fatigue
+  strength of an alloy steel, in: Proc. Int. Conf. on Fatigue of Metals, Vol.
+  138, Institution of Mechanical Engineers London, 1956.
+
+\bibitem{sines1959behavior}
+G.~Sines, Behavior of metals under complex static and alternating stresses,
+  Metal fatigue 1 (1959) 145--169.
+
+\bibitem{FFE:FFE452}
+F.~Morel, \href{http://dx.doi.org/10.1046/j.1460-2695.1998.00452.x}{A fatigue
+  life prediction method based on a mesoscopic approach in constant amplitude
+  multiaxial loading}, Fatigue and Fracture of Engineering Materials and
+  Structures 21~(3) (1998) 241--256.
+\newblock \href {http://dx.doi.org/10.1046/j.1460-2695.1998.00452.x}
+  {\path{doi:10.1046/j.1460-2695.1998.00452.x}}.
+\newline\urlprefix\url{http://dx.doi.org/10.1046/j.1460-2695.1998.00452.x}
+
+\bibitem{thu2008effet}
+H.~N.~T. Thu, Effet des h{\'e}t{\'e}rog{\'e}n{\'e}it{\'e}s microstructurales
+  sur le comportement en fatigue multiaxiale {\`a} grand nombre de cycles:
+  application {\`a} l'usinage assist{\'e} laser, Ph.D. thesis, Arts et
+  M{\'e}tiers ParisTech (2008).
+
+\bibitem{findley1959}
+W.~Findley, Engng. Industry 81(4) (1959) 301.
+
+\bibitem{liu1993berechnung}
+J.~Liu, H.~Zenner, Berechnung der dauerschwingfestigkeit bei mehrachsiger
+  beanspruchung—teil 1, Materialwissenschaft und Werkstofftechnik 24~(7)
+  (1993) 240--249.
+
+\bibitem{ellyin1974criterion}
+F.~Ellyin, A criterion for fatigue under multiaxial states of stress, Mechanics
+  Research Communications 1~(4) (1974) 219--224.
+
+\bibitem{lefebvre1981cognitive}
+M.~F. Lefebvre, Cognitive distortion and cognitive errors in depressed
+  psychiatric and low back pain patients., Journal of consulting and clinical
+  psychology 49~(4) (1981) 517.
+
+\bibitem{ellyin1991phase}
+F.~Ellyin, K.~Golos, Z.~Xia, In-phase and out-of-phase multiaxial fatigue, ASME
+  J. Eng. Mater. Technol 113 (1991) 112.
+
+\bibitem{Froustey1992}
+D.~L. Froustey~C., Laserre~S., Validit{\'e} des crit{\`e}res de fatigue
+  multiaxiale {\`a} l’endurance en flexion-torsion. (1992) Mat--Tech
+  ‘92’, IITT--International, France, 79--85.
+
+\bibitem{palin1996fatigue}
+T.~Palin-Luc, Fatigue multiaxiale d'une fonte gs sous sollicitations
+  combin{\'e}es d'amplitude variable, Ph.D. thesis (1996).
+
+\bibitem{banvillet2001prevision}
+A.~Banvillet, Pr{\'e}vision de dur{\'e}e de vie en fatigue multiaxiale sous
+  chargements r{\'e}els: vers des essais acc{\'e}l{\'e}r{\'e}s, These de
+  Doctorat.
+
+\bibitem{lemaitre1999two}
+J.~Lemaitre, J.~Sermage, R.~Desmorat, A two scale damage concept applied to
+  fatigue, International Journal of fracture 97~(1) (1999) 67--81.
+
+\bibitem{lemaitre1985mecanique}
+J.~Lema{\^\i}tre, J.~L. Chaboche, M{\'e}canique des mat{\'e}riaux solides.
+
+\bibitem{flaceliere2004contribution}
+L.~Flaceli{\`e}re, Contribution a la mod{\'e}lisation du dommage en fatigue
+  multiaxiale d’un acier c36: confrontation {\`a} l’exp{\'e}rience, Ph.D.
+  thesis, Poitiers (2004).
+
+\bibitem{monchiet2006contributions}
+V.~Monchiet, Contributions {\`a} la mod{\'e}lisation microm{\'e}canique de
+  l'endommagement et de la fatigue des m{\'e}taux ductiles, Ph.D. thesis, Lille
+  1 (2006).
+
 \bibitem{Maitournam2011232}
 M.~Maitournam, C.~Krebs, A.~Galtier,
   \href{http://www.sciencedirect.com/science/article/pii/S0142112310001933}{A
@@ -38,14 +121,16 @@ J.~Lemaitre, J.-L. Chaboche, Mechanics of solid materials, Cambridge university
   \url{https://www.mathworks.com/matlabcentral/fileexchange/4540-legendre-gauss-quadrature-weights-and-nodes},
   accessed: 2004-05-11.
 
-\bibitem{dieter1961mechanical}
-G.~DIETER, MECHANICAL METALLURGY, 1961.
+\bibitem{susmel2003multiaxial}
+L.~Susmel, N.~Petrone, Multiaxial fatigue life estimations for 6082-t6
+  cylindrical specimens under in-phase and out-of-phase biaxial loadings,
+  European Structural Integrity Society 31 (2003) 83--104.
 
 \bibitem{Dubar1992}
-L.~DUBAR, Fatigue multiaxiale des aciers - passage de l’endurance à
-  l’endurance limitée -prise en compte des accidents géométriques., Thèse
-  de Doctorat,Ecole Nationale Supérieure d’Arts et Métiers, Talence,
-  France.
+L.~DUBAR, Fatigue multiaxiale des aciers - passage de l’endurance {\`a}
+  l’endurance limit{\'e}e -prise en compte des accidents
+  g{\'e}om{\'e}triques., Th{\`e}se de Doctorat,Ecole Nationale Sup{\'e}rieure
+  d’Arts et M{\'e}tiers, Talence, France.
 
 \bibitem{lee2013out}
 S.-B. Lee, Out-of-phase combined bending and torsion fatigue of steels,
@@ -62,8 +147,9 @@ B.~W. G. J. M.~E. ACHTELIC, H., Fatigue life of 10hnap steel under synchronous
   random bending and torsion. (1994) 421–434.
 
 \bibitem{VIDAL1996}
-E.~VIDAL, Prévision de la durée de vie en fatigue multiaxiale sous
-  sollicitations d’amplitude variable à l’aide d’un critère global.
+E.~VIDAL, Pr{\'e}vision de la dur{\'e}e de vie en fatigue multiaxiale sous
+  sollicitations d’amplitude variable {\`a} l’aide d’un crit{\`e}re
+  global.
 
 \bibitem{jabbado:pastel-00002116}
 M.~Jabbado,
@@ -76,5 +162,15 @@ M.~Jabbado,
 A.~Carpinteri, A.~Spagnoli, S.~Vantadori, A multiaxial fatigue criterion for
   random loading, Fatigue \& Fracture of Engineering Materials \& Structures
   26~(6) (2003) 515--522.
+
+\bibitem{van1986criterion}
+K.~D. Van, G.~Cailletaud, J.~Flavenot, A.~Le~Douaron, H.~Lieurade, Criterion
+  for high-cycle fatigue failure under multiaxial loading, in: ICBMFF2, 1986.
+
+\bibitem{de2013comportement}
+D.~S. De~Vasconcellos, Comportement en fatigue avant et apr{\`e}s impact de
+  composites tiss{\'e}s chanvre/{\'e}poxy, Ph.D. thesis, ISAE-ENSMA Ecole
+  Nationale Sup{\'e}rieure de M{\'e}canique et d'A{\'e}rotechique-Poitiers
+  (2013).
 
 \end{thebibliography}

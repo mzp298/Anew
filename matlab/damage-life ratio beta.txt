@@ -2,21 +2,43 @@ clear;clc
 
 alpha=0.8;
 
-beta1=0.1;
-beta2=0.3;
-beta3=0.5;
+gamma1=0.05;
+gamma2=0.3;
+gamma3=0.8;
 ratio=0:0.1:1;
 
-D1=(1-(1-ratio.^(1/(1-alpha)))).^(1/(beta1+1));
-D2=(1-(1-ratio.^(1/(1-alpha)))).^(1/(beta2+1));
-D3=(1-(1-ratio.^(1/(1-alpha)))).^(1/(beta3+1));
+D1=(1-(1-ratio.^(1/(1-alpha)))).^(1/(gamma1+1));
+D2=(1-(1-ratio.^(1/(1-alpha)))).^(1/(gamma2+1));
+D3=(1-(1-ratio.^(1/(1-alpha)))).^(1/(gamma3+1));
 D4=(1-(1-ratio.^(1/(1-0))));
 
-plot(ratio,D1,'r',ratio,D2,'b',ratio,D3,'g',ratio,D4,'--p')
-title('Linear damage rule and nonlinear rule at three stress levels in a plot of fatigue damage versus cycle ratio');
-xlabel('N/N_{F}');
-ylabel('D');
-text(0.5,0.25,'\alpha=0.8,\beta=0.1');
-text(0.6,0.2,'\alpha=0.8,\beta=0.3');
-text(0.7,0.15,'\alpha=0.8,\beta=0.5');
-text(0.25,0.4,'\alpha=0,\beta=0');
+plot(ratio,D1,'-.r',ratio,D2,'--b',ratio,D3,':g',ratio,D4,'-k','LineWidth', 5);
+text(0.5,0.30,'\gamma=0.05','FontSize', 35);
+text(0.6,0.26,'\gamma=0.3','FontSize', 35);
+text(0.7,0.15,'\gamma=0.8','FontSize', 35);
+text(0.2,0.38,'\alpha=0,\gamma=0','FontSize', 35);
+
+
+% % ---------------------plot settings-----------------------------
+grid on;
+grid minor;
+set(gca ,'FontSize',35);
+hXLabel = xlabel('N/N_{F}');
+ hYLabel =ylabel('D');
+ % Adjust font
+set(gca, 'FontName', 'Helvetica')
+set([hXLabel, hYLabel], 'FontName', 'AvantGarde')
+set([hXLabel, hYLabel], 'FontSize', 35)
+
+set(gca, 'Box', 'off', 'TickDir', 'out', 'TickLength', [.02 .02], ...
+    'XMinorTick', 'on', 'YMinorTick', 'on', 'YGrid', 'on', ...
+    'XColor', [.3 .3 .3], 'YColor', [.3 .3 .3], ...
+    'LineWidth', 1)
+set(gcf,'color','w'); %set figure background transparent
+set(gca,'color','w'); %set axis transparent
+% Maximize print figure
+set(gcf,'outerposition',get(0,'screensize'));
+set(gcf, 'PaperPositionMode', 'manual');
+set(gcf, 'PaperUnits', 'points'); %[ {inches} | centimeters | normalized | points ]
+set(gcf, 'PaperPosition', [0 0 1280 800]); %set(gcf,'PaperPosition',[left,bottom,width,height])
+saveas(gcf,'F:\Git\Doctor_thesis_Zepeng\figures\Dratio2.png');
