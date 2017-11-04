@@ -27,7 +27,7 @@ S.~Bosia, A.~Constantinescu,
 
 \bibitem{zepeng}
 M.~Zepeng, Structures under multiaxial fatigue taking consideration of
-  gradients of the constraints with time and space variation.
+  gradients of the constraints with time and space variation (2017).
 
 \bibitem{lemaitre1990mechanics}
 J.~Lemaitre, J.-L. Chaboche, Mechanics of solid materials, Cambridge university
@@ -43,15 +43,30 @@ L.~Susmel, N.~Petrone, Multiaxial fatigue life estimations for 6082-t6
   cylindrical specimens under in-phase and out-of-phase biaxial loadings,
   European Structural Integrity Society 31 (2003) 83--104.
 
+\bibitem{EFATIGUE}
+Multiaxial strain-life technical background,
+  \url{https://www.efatigue.com/multiaxial/background/strainlife.html}.
+
+\bibitem{HUANG2017259}
+Y.~Huang, S.-T. Tu, F.-Z. Xuan,
+  \href{http://www.sciencedirect.com/science/article/pii/S0013794417306653}{Pit
+  to crack transition behavior in proportional and non-proportional multiaxial
+  corrosion fatigue of 304 stainless steel}, Engineering Fracture Mechanics
+  184~(Supplement C) (2017) 259 -- 272.
+\newblock \href
+  {http://dx.doi.org/https://doi.org/10.1016/j.engfracmech.2017.08.019}
+  {\path{doi:https://doi.org/10.1016/j.engfracmech.2017.08.019}}.
+\newline\urlprefix\url{http://www.sciencedirect.com/science/article/pii/S0013794417306653}
+
 \bibitem{ellyin1991phase}
 F.~Ellyin, K.~Golos, Z.~Xia, In-phase and out-of-phase multiaxial fatigue, ASME
   J. Eng. Mater. Technol 113 (1991) 112.
 
 \bibitem{Dubar1992}
-L.~DUBAR, Fatigue multiaxiale des aciers - passage de l’endurance {\`a}
-  l’endurance limit{\'e}e -prise en compte des accidents
-  g{\'e}om{\'e}triques., Th{\`e}se de Doctorat,Ecole Nationale Sup{\'e}rieure
-  d’Arts et M{\'e}tiers, Talence, France.
+L.~DUBAR, Fatigue multiaxiale des aciers - passage de l’endurance à
+  l’endurance limitée -prise en compte des accidents géométriques., Thèse
+  de Doctorat,Ecole Nationale Supérieure d’Arts et Métiers, Talence,
+  France.
 
 \bibitem{lee2013out}
 S.-B. Lee, Out-of-phase combined bending and torsion fatigue of steels,
@@ -68,9 +83,8 @@ B.~W. G. J. M.~E. ACHTELIC, H., Fatigue life of 10hnap steel under synchronous
   random bending and torsion. (1994) 421–434.
 
 \bibitem{VIDAL1996}
-E.~VIDAL, Pr{\'e}vision de la dur{\'e}e de vie en fatigue multiaxiale sous
-  sollicitations d’amplitude variable {\`a} l’aide d’un crit{\`e}re
-  global.
+E.~VIDAL, Prévision de la durée de vie en fatigue multiaxiale sous
+  sollicitations d’amplitude variable à l’aide d’un critère global.
 
 \bibitem{jabbado:pastel-00002116}
 M.~Jabbado,

@@ -57,7 +57,6 @@
 \usepackage{datetime}
 \usepackage{multirow,tabularx}
 \usepackage{bbm}
-\usepackage{amsmath}
 \DeclareMathOperator{\Tr}{Tr}
 \usepackage{animate}
 
@@ -402,8 +401,8 @@ N_{F}=\dfrac{W_0}{W_{cyc}}=\dfrac{W_0}{C_1}S_{a}^{-\beta-1}.
 \end{equation}
 As for the time to failure in cyclic loading, it will be:
 $$T_{F}=N_{F}t_{cyc}.$$
-From Eq.\eqref{eq:w}, we then obtain that in uniaxial cyclic loading the model predicts as expected (Chapter \ref{chp:4}) a power law dependence of the number of cycles to failure in function of $S_{a}$.
-However, experiments shows that the damage or the energy accumulation of a material evolves non-linearly in time and present a load dependent cycle (Chapter \ref{chp:4}). We should introduce below a method to handle such a nonlinearity.
+From Eq.\eqref{eq:w}, we then obtain that in uniaxial cyclic loading the model predicts as expected a power law dependence of the number of cycles to failure in function of $S_{a}$.
+However, experiments shows that the damage or the energy accumulation of a material evolves non-linearly in time and present a load dependent cycle . We should introduce below a method to handle such a nonlinearity.
 
 \section{Nonlinearity of damage accumulation}
 \label{sec:5.6}
@@ -589,7 +588,7 @@ The curve in both cases is depicted in \figref{fig.sequence}.
 For constant two-level stress loading, $\alpha_1=\alpha_2$, the Chaboche law returns to the Miner rule when $F_{low}=F_{high}$ where:
 $$\frac{T_1}{T_{F1}}+\frac{T_2}{T_{F2}}=1.$$
 
-\newpage
+
 \subsection{The final model}
 \label{sec:5.6.3}
 In summary, our damage based fatigue life criterion using a damage evolution governed by a multiscale plastic energy dissipation, has four ingredients.
@@ -662,7 +661,7 @@ given $u=\dfrac{x+1}{2}$. So the dissipated energy rate integrated over all scal
 \dot{W}=\frac{1}{2}\int_{-1}^{1}\dot{w}\left[  \left( \frac{x+1}{2}\right) ^{\frac{1}{1-\beta}},t\right] dx\approx\frac{1}{2}\sum_{i}\omega_i\dot{w}\left[  \left( \frac{x_i+1}{2}\right) ^{\frac{1}{1-\beta}},t\right],
 \label{allscalerate}
 \end{equation}
-where $\omega_i$ and $x_i$ are respectively the weights and nodes of the Gauss Legendre integration rule used for the numerical integration.  In this work, we used a 64 points Gaussian Legendre integration rule (\cite{Legendre}) with $s_i=\left( \dfrac{x_i+1}{2}\right) ^{\frac{1}{1-\beta}}$ being the associated scale.
+where $\omega_i$ and $x_i$ are respectively the weights and nodes of the Gauss Legendre integration rule used for the numerical integration.  In this work, we used a 1024 points Gaussian Legendre integration rule (\cite{Legendre}) with $s_i=\left( \dfrac{x_i+1}{2}\right) ^{\frac{1}{1-\beta}}$ being the associated scale.
 
 \subsection{Calculation of local plastic dissipation}
 \label{sec:5.4.4}
@@ -817,9 +816,9 @@ The optimal time step method clearly reduces the numerical cost. Typically, we a
 \centering
 \begin{tabular}{l|l}
 \hline
-Full numerical strategy: & $1000$ time steps $\times$ $64$ scales $\times$  $1\times10^{6}$ cycles       \\ \hline
-Optimal cyclic strategy: & \begin{tabular}[l]{@{}l@{}} $1000$ time steps $\times$ $64$ scales $\times$  $5$ cycles until stabilization  \\$+$ $1\times10^{6}$ cycles $\times$ ($1000$ time steps $\times$ reduction factor)      \end{tabular}  \\ \hline
-Ratio between optimal and full: & $\approx \dfrac{reduction \; factor}{64 \; scales}=\dfrac{1}{731}$       \\ \hline
+Full numerical strategy: & $1000$ time steps $\times$ $1024$ scales $\times$  $1\times10^{6}$ cycles       \\ \hline
+Optimal cyclic strategy: & \begin{tabular}[l]{@{}l@{}} $1000$ time steps $\times$ $1024$ scales $\times$  $5$ cycles until stabilization  \\$+$ $1\times10^{6}$ cycles $\times$ ($1000$ time steps $\times$ reduction factor)      \end{tabular}  \\ \hline
+Ratio between optimal and full: & $\approx \dfrac{reduction \; factor}{1024 \; scales}=\dfrac{1}{11703}$       \\ \hline
 \end{tabular}
 \end{table}
 
@@ -840,63 +839,6 @@ The same strategy is applied to random loading situations which are made of repe
 \end{itemize}
                           
 In such a strategy, the extra cost of introducing multiple scales in the calculation becomes negligible as compared to the time integration of damage in the evolution process.
-
-\begin{Figure}[]{S-N curve of bending test on 30NCD16 steel using numerical and analytical method (Eq.\eqref{eq.cycNF}) with different time steps. Data are those of table.\ref{tab:Sin}}[fig.sn-num-ana]
-	\centerline{
-		\graphfile*[38]{figures//SN_num_ana_stepnumber=30.png}[30 time steps in unit cycle($\beta=1.1$, $a=0.001$).]
-		\graphfile*[38]{figures//SN_num_ana_stepnumber=100.png}[100 time steps in unit cycle($\beta=1.1$, $a=0.001$).]}
-	\\
-	\centerline{
-		\graphfile*[38]{figures//SN_num_ana_stepnumber=30_err.png}[Relative error$\left( \dfrac{NF_{num}-NF_{analytical}}{NF_{analytical}}\right)$  with 30 time \protect \\ steps in unit cycle  ($\beta=1.1$, $a=0.001$)]
-		\graphfile*[38]{figures//SN_num_ana_stepnumber=100_err.png}[Relative error$\left( \dfrac{NF_{num}-NF_{analytical}}{NF_{analytical}}\right)$   with 100 time \protect \\ steps in unit cycle  ($\beta=1.1$, $a=0.001$)]}
-	\label{fig.sn-num-ana}
-\end{Figure}
-
-\newpage
-
-Altogether, we have three numerical approaches for integrating damage.
-
-\begin{enumerate}
-	\item  Numerical results with varying $\alpha$(equally divide time in unit cycle), and do the scale integration all along the fatigue life time, which can be of high numerical cost$$\delta D=D^\alpha\frac{\dot{W}}{W_0}\delta t.$$
-	This method only serves for qualification purposes.
-	\vspace{6pt}
-	
-	\item  Numerical results with optimal time steps(equally divide $\alpha$in unit cycle), here we have $\Delta\alpha=0.01$, to reduce time steps needed, after several cycles adaptation we iterate using the recorded scalar values of $\alpha_{ref}$, $W_{ref}$ and $t_{ref}$ to decide fatigue life time.
-	$$\delta D=D^{\alpha_{ref}}\frac{W_{ref}}{W_0}\delta t_{ref}.$$
-	\vspace{6pt}
-	
-	\item  Analytical results after integration of D (with mean alpha from numerical strategy)$$N_F=\frac{W_0}{( 1-\alpha_m)W_{cyc}},$$ 
-	which is derived from the differential equation
-	$$\delta D=D^{\alpha_m}\frac{W_{cyc}}{W_0}\delta N.$$
-\end{enumerate}	
-
-Although method 2 is much more numerically efficient than the original numerical method 1, it is still not cheap in the experimental fitting process. We need the analytical formula method 3 to do the fitting process. To validate the feasibility, we now compare only the analytical(method 3) one and optimal time steps(method 2) one. The results are shown in \figref{fig.SNnumerical2methods} and \figref{fig.SNnumerical2methods2}, the relation ship between relative error and $\Delta \alpha$ with 2000 time steps in unit cycle is shown in  \figref{fig.errorNumAna0.02} and \figref{fig.errorNumAna0.01}.
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//SN_opt_ana_200_delta_alp=0.00002.png} 
-	\caption{S-N curve using analytical and numerical results with optimal time steps methods ($\beta=1.1$, $a=0.01$, $\Delta \alpha=2E-5$ in unit cycle), yielding 200 full time steps reduced to 197 optimal time steps}
-	\label{fig.SNnumerical2methods}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//SN_opt_ana_200_delta_alp=0.00001.png} 
-	\caption{S-N curve using analytical and numerical results with optimal time steps methods ($\beta=1.1$, $a=0.01$, $\Delta \alpha=1E-5$ in unit cycle), yielding 200 full time steps reduced to 199 optimal time steps}
-	\label{fig.SNnumerical2methods2}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//SN_opt_ana_200_delta_alp=0.00002_err.png} 
-	\caption{Relative error $\left( \dfrac{NF_{opt}-NF_{analytical}}{NF_{analytical}}\right)$  between analytical and numerical results with optimal time steps methods ($\beta=1.1$, $a=0.01$, $\Delta \alpha=2\times10^{-5}$ in unit cycle)}	
-	\label{fig.errorNumAna0.02}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//SN_opt_ana_200_delta_alp=0.00001_err.png} 
-	\caption{Relative error $\left(\dfrac{NF_{opt}-NF_{analytical}}{NF_{analytical}}\right)$  between analytical and numerical results with optimal time steps methods ($\beta=1.1$, $a=0.01$, $\Delta \alpha=1\times10^{-5}$ in unit cycle)}
-	\label{fig.errorNumAna0.01}
-\end{figure}
-
-Now we can conclude that with more time steps in unit cycle, we get closer results with the original numerical method(method 2) in HCF regime. With smaller $\Delta \alpha$ value, we get less relative error between numerical(method 3) and analytical(method 1) results. This indicates that in constant amplitude cyclic loading, with moderate values of $\beta$ it is feasible to use the analytical formula, given $\alpha_m$ is calculated using sufficient large time steps and small $\Delta \alpha$ in the first several cycles.
 
 \clearpage
 \section{Validation on recovery tests}
@@ -920,7 +862,7 @@ The test is first performed on a sinusoidal uniaxial load $\Sigma_{11}(t)=Asin(t
 	\label{tab:Sin}
 \end{table}
 
-We use matlab to numerically realize our method. The plot of $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}$ and $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|$ during the first cycles at two different scales($s_{3}=1.21$ and $s_{10}=1.13$) are shown in \figref{fig.trialsin0} and \figref{fig.trialsinm}. We use here a fixed value of $\lambda$($\lambda_+=\lambda_-$), thus the local yield limit is reduced in traction and increased
+We use matlab to numerically realize our method. The plot of $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|_{trial}$ and $\left\|  \uline{\uline{S}}-\uline{\uline{b}}\right\|$ during the first cycles at two different scales($s_{3}=1.21$ and $s_{10}=1.13$) are shown in \figref{fig.trialsin0}. We use here a fixed value of $\lambda$($\lambda_+=\lambda_-$), thus the local yield limit is reduced in traction and increased
 in compression.
 
 \begin{figure}[!h]
@@ -929,138 +871,18 @@ in compression.
 	\caption{Microscopic $\left(  \uline{\uline{S}}-\uline{\uline{b}}\right)_{trial}$ and $\left( \uline{\uline{S}}-\uline{\uline{b}}\right)$ evolution with time under different weakening scales($s_{3}=1.21$ and $s_{10}=1.13$) in sinusoidal load with zero mean stress}
 	\label{fig.trialsin0}
 \end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//trialsin_m.png} 
-	\caption{Microscopic $\left(  \uline{\uline{S}}-\uline{\uline{b}}\right)_{trial}$ and $\left( \uline{\uline{S}}-\uline{\uline{b}}\right)$ evolution with time under different weakening scales($s_{3}=1.21$ and $s_{10}=1.13$) in sinusoidal load with mean stress=300 MPa}
-	\label{fig.trialsinm}
-\end{figure}
-
-The time history of dissipated energy is depicted in \figref{fig.W3methods}. We scale $S_{a}$ in the plot to see more clearly the relation between energy dissipation and stress intensity. The choice of $\alpha$ does not affect $W$; it only concerns damage accumulation rate. Smaller $\alpha$ causes faster accumulation.
-
-The ``jump'' in energy evolution is due to activation of new scales while in-between two scales the dissipated energy follows the stress increment at each time step. In other words, because in our method the dissipated energy $W$(\figref{fig.W3methods}), sums energy dissipation at all scales, any additional violation of $\left\|S-b \right\|_{trial}$ at local yield limit(\figref{fig.trialsin0}) introduces an additional dissipation. 
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W_3methods.png} 
-	\caption{Validation of dissipated energy in all scales with analytical(method 3) and numerical method(method 1) with $\beta=1.1$,$\Sigma=0.85\sigma_y$. The time evolution of $\alpha$ does not play a role in the dissipation calculation which is normal since $\alpha$ does not enter in the dissipation calculation }
-	\label{fig.W3methods}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W_3methods_enlarge.png} 
-	\caption{Validation of dissipated energy in all scales with analytical and numerical method(enlargement of \figref{fig.W3methods})}
-	\label{fig.W3methodsenlarge}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W_3methods2_100steps.png} 
-	\caption{Dissipated energy accumulation through time with different methods, there are 100 time steps in unit cycle}
-	\label{fig.W3methods100}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W_3methods_100steps_enlarge.png} 
-	\caption{Dissipated energy accumulation through time with of 3 methods(enlargement of \figref{fig.W3methods100})}
-	\label{fig.W3methods2enlarge}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W_3methods_diff_100steps.png} 
-	\caption{Relative difference $\dfrac{W_{analytical}-W_{numerical}}{W_{analytical}}$ between analytical energy loss and numerical one with $\alpha$ varying with time of \figref{fig.W3methods100}}
-	\label{fig.W3methodsdiff}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//D_3methods2_100steps.png} 
-	\caption{Damage evolution with time under sinusoidal load with different methods, there are 100 time steps in unit cycle($\beta=1.1$,$\Sigma=0.85\sigma_y$)}
-	\label{fig.damsin100}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//D_3methods_100steps_enlarge.png} 
-	\caption{Damage evolution with time under sinusoidal load with two different methods(enlargement of \figref{fig.damsin100})}
-	\label{damsinenglarge}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//D_3methods_diff_100steps.png} 
-	\caption{Relative difference $\dfrac{D_{analytical}-D_{numerical}}{D_{analytical}}$ evolution with time of \figref{fig.damsin100}}
-	\label{Damagediff}
-\end{figure}
-We take the mean value of $\alpha$ during all the iteration process of numerical method as $\alpha_{m}$. The energy and damage accumulation is shown in \figref{fig.W3methods100} and \figref{fig.damsin100}. Here we give 100 time steps in one cycle to see the relative difference between changing $\alpha$ and $\alpha_{m}$, also $\dot{W}$ and $W_{cyc}/stepnumber$  method. The more time steps we give, the more precision we get. The relative difference between analytical energy loss and numerical one is shown in \figref{fig.W3methodsdiff} from which we conclude that the three methods converge in terms of elastic energy dissipation, but due to nonlinear effects the damage evolution does not have the same history per cycle. The frozen $\alpha$ delays damage, the varying $\alpha$ increases damage during the phase of strong loading. The difference has a significant impact if damage occurs with very few cycles. It will not when computing on a large number of cycles.
-
-The cyclic load calculation is only valid for very simple such as proportional loading in fatigue. However, the convergence of the two methods is based on the small value of $\beta$(close to 1), in case of large values of $\beta$(typically around 5), the numerical strategy gives shorter life than the analytical one due to extreme non-linearity in the energy dissipation history per cycle. The relative error is around 20\% as shown in \figref{fig.W3methods_bigbeta_04y} and \figref{fig.W3methods_bigbeta_08y}. Nevertheless the analytical formula can still be used as a comparison group to verify the numerical results. And in the identification process we need the analytical form to fit the $S-N$ curve of a certain material. The outcome is satisfactory. Hence, to be more general for any loading history, we adopt the numerical method after identification of $\beta$. 
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W3methods_bigbeta_04y.png} 
-	\caption{Validation of dissipated energy in all scales with analytical and numerical method with $\beta=5$, $\Sigma=0.4\sigma_y$ }
-	\label{fig.W3methods_bigbeta_04y}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures//W3methods_bigbeta_08y.png} 
-	\caption{Validation of dissipated energy in all scales with analytical and numerical method with $\beta=5$, $\Sigma=0.8\sigma_y$ }
-	\label{fig.W3methods_bigbeta_08y}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//damsin_bigbeta_04y.png} 
-	\caption{Damage evolution with time under sinusoidal load with $\beta=5$, $\Sigma=0.4\sigma_y$. In such a severe loading and with extreme non-linearity, the simple Chaboche like formula with frozen $\alpha$ departs from the outcome of the full numerical model}
-	\label{fig.damsin_bigbeta_04y}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//damsin_bigbeta_08y.png} 
-	\caption{Damage evolution with time under sinusoidal load with $\beta=5$, $\Sigma=0.8\sigma_y$}
-	\label{fig.damsin_bigbeta_08y}
-\end{figure}
-
-\clearpage
-\subsection{Numerical recovery of sequence effect}
-We adopt the parameter $\alpha$ to take into account the sequence effect. The high-low loading sequence clearly reduces the fatigue life, as depicted in \figref{fig.sequencesigalpd}. In order to cover this phenomenon, we let $\alpha$ change with time($\alpha=1-a\left( s_{min}(t)-1\right)^{-f}$). Here $a$ is the sequence effect sensitivity. According to Eq.\eqref{eq.smin}, we have:
-$$
-s_{min}(t)=\dfrac{\Sigma_y-\lambda \Sigma_H(t)}{S_{a}(t)},
-$$
-which is the minimum weakening scale that activates energy loss.  We use a general law for $\alpha$ of the type $\alpha = \alpha (s_{min})$ with the idea that for us $s_{min}$ is a measure of present intensity of macroscopic stress. It is therefore a mechanical based stress norm. The impact of this construction of $\alpha$ can be seen on \figref{fig.randomdispersion}, on a test case specifically built to illustrate such a sequence effect.
-
-\begin{Figure}[]{Two level sequence effect. By comparing the vertical figures we can see high stress gives high $(1-\alpha)$ value which causes fast damage accumulation speed. The evolution of $(1-\alpha)$ is highly nonlinear and follows the value of stress at each time step.}[fig.sequencesigalpd]
-	\centerline{
-		\graphfile*[40]{figures//high-low-Smax.png}[]
-		\graphfile*[40]{figures//low-high-Smax.png}[]}
-	\\
-	\centerline{
-		\graphfile*[40]{figures//high-low-alp.png}[]
-		\graphfile*[40]{figures//low-high-alp.png}[]}
-	\\
-	\centerline{
-		\graphfile*[40]{figures//high-low-D.png}[]
-		\graphfile*[40]{figures//low-high-D.png}[]}
-	\label{fig.sequencesigalpd}
-\end{Figure}
 
 
 \clearpage
 \subsubsection{Major damage effect}
 
-To see the influence of sequence effect factor of $\alpha$, we first fix $\alpha$ for all tests to see the results. When $\alpha$ is fixed, it becomes denominator in the final expression of $N_F$ (Eq.\eqref{eq.NFWcyc}) and has the same impact as $W_0$. We find  that the fatigue life of random loading is widely dispersed (\figref{fig.randomdispersion}). In this case we need to use $\alpha=f(s_{min})$ which evolves with time to make large stress intensity bring more damage.
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//randomdispersion.png} 
-	\caption{Fatigue life of random loading dispersion}
-	\label{fig.randomdispersion}
-\end{figure}
+To see the influence of sequence effect factor of $\alpha$, we first fix $\alpha$ for all tests to see the results. When $\alpha$ is fixed, it becomes denominator in the final expression of $N_F$ (Eq.\eqref{eq.NFWcyc}) and has the same impact as $W_0$. We find  that the fatigue life of random loading is widely dispersed. In this case we need to use $\alpha=f(s_{min})$ which evolves with time to make large stress intensity bring more damage.
 
 After comparison with the experimental data we find out that large stresses cause much more damage than the smaller ones. It is necessary to include this major stress induced damage to our stress intensity parameter $\alpha$. With the new $\alpha$ used in Eq.\eqref{eq.final3} compared to Eq.\eqref{eq.alpha} we are able to calibrate our model better with the experimental results by using 
 \begin{equation}
 \alpha=1-a\left(  \dfrac{\frac{1}{s_{min}}}{1-\frac{1}{s_{min}}} \right) ^{f}.
 \label{eq.majoralp}
 \end{equation}
-
 
 With $f=1.1$, we use the power to magnify large stress impact and minify lower stress damage.  The demonstration of major damage effect using magnification power is depicted in \figref{fig.sequenceours}. With larger value of power, the sequence effect is more significant(bigger dispersion between high-low and low-high sequence).
 
@@ -1092,7 +914,7 @@ The major damage effect can be seen in \figref{fig.SmaxSequence}, which occurs w
 \clearpage
 \section{Identification strategy}
 \label{sec:5.9}
-In our tests we keep $f=1.1$(justified in Chapter \ref{chp:6} by \figref{fig.Cetimerralpfix} and \figref{fig.Cetimerr}). The positive hydrostatic stress and negative one have different effect on the yield limit. It is necessary to adopt 2 parameters to describe this behavior. So we divide the hydrostatic sensitivity $\lambda$ into 2 parts. $\lambda_+$ and $\lambda_-$. In the analytical formula, the amplitude of the stress intensity is adopted and the average value of tension hydrostatic stress(+) and compressive hydrostatic stress(-) is introduced.
+In our tests we keep $f=1.1$(justified in by \figref{fig.Cetimerralpfix} and \figref{fig.Cetimerr}). The positive hydrostatic stress and negative one have different effect on the yield limit. It is necessary to adopt 2 parameters to describe this behavior. So we divide the hydrostatic sensitivity $\lambda$ into 2 parts. $\lambda_+$ and $\lambda_-$. In the analytical formula, the amplitude of the stress intensity is adopted and the average value of tension hydrostatic stress(+) and compressive hydrostatic stress(-) is introduced.
 
 For a good lifetime prediction, it is necessary to first identify the appropriate parameters of the model. For this purpose, we use the analytical formula Eq.\eqref{eq.cycNF} obtained in uniaxial cyclic loading case. With distinction of the hydrostatic stress in the presence of non-zero mean stress and since in fully reversed uniaxial loading we spend an equal time in compression and in traction, Eq.\eqref{eq:w} now writes:
 
@@ -1136,7 +958,6 @@ The parameters to be calibrated are $W_0$, $\beta$ and $\lambda$. Since the expo
 	\item We first identify the S-N curve slope $\beta$ and the energy scale $W_0$ using the analytical formula with torsion tests because there is no $\lambda_{+-}$ impact in this kind of loading. We start from an initial guess $\beta$ from which we can deduce $\alpha_{(i)}$ by  numerical calculation of Eq.\ref{eq.meanalp} and identify $\beta$ and $W_0$ by least squares. Because our analytical formula is not derivable in all ranges, when the identified value of $\beta$ or $W_0$ get stuck in local minimum value, we regenerate a random $\beta$ or $W_0$ in their range so as to get the global least square value.
 	\item Then, the parameter $\lambda_{+}$ are identified from numerical bending tests and we keep $\lambda_-=0$. The final parameters correspond to the $\lambda$ leading to the lowest identification error in $\beta$ and $W_0$. This strategy handles the nonlinearity in $\beta$ and is well adapted to the low sensitivity in $\lambda$.
 \end{enumerate}
-
 
 
 The analytical formula Eq.\eqref{eq:NFnew} with mean stress effect converges with the numerical method very well in the case of small $\beta$ and $\lambda_{+-}$. 
@@ -1562,7 +1383,7 @@ The $90^\circ$ out-of-phase loading path has been found to produce the largest d
 	\graphfile*[52]{figures//AL6082T6_bt2d90_err.png}[Bending-torsion $90^\circ$ out of phase tests on 6082 T6 aluminum(R=-1)]
 \end{Figure}
 
-The model predictive results for the periodic loads of constant amplitude with a radial path are in good agreement with the durations of experimental life. For the latter condition, 90 deg out-of-phase loading was also investigated(\figref{fig.al6082T6err}c). These tests indicated a dramatic change in the number of cycles to failure , $N_F$ , as a result of out-of-phase loading. The influence of the plastic strain path on life is thus clearly demonstrated. It is shown that the total strain energy density, $ΔW_t = ΔW_e+ + ΔW_p$ (\cite{ellyin1991phase}) , correlates with both the in-phase and out-of-phase cyclic tests, and therefore is a proper damage parameter to be used for life predictions. Our microplasticity model does not take this strain path effect into account and we get inaccurate results on this test.
+The model predictive results for the periodic loads of constant amplitude with a radial path are in good agreement with the durations of experimental life. For the latter condition, 90 deg out-of-phase loading was also investigated(\figref{fig.al6082T6err}c). These tests indicated a dramatic change in the number of cycles to failure , $N_F$ , as a result of out-of-phase loading. The influence of the plastic strain path on life is thus clearly demonstrated. It is shown that the total strain energy density, $\Delta W_t = \Delta W_e+ \Delta W_p$ (\cite{ellyin1991phase}) , correlates with both the in-phase and out-of-phase cyclic tests, and therefore is a proper damage parameter to be used for life predictions. Our microplasticity model does not take this strain path effect into account and we get inaccurate results on this test.
 
 
 
@@ -1660,10 +1481,6 @@ The identification of the parameters consists in minimizing the relative differe
 	\label{30ncdpara2}
 \end{table}
 
-\begin{Figure}[!h]{Calibration on  30NCD16 (\cite{Dubar1992}). We can observe that the bending-torsion experimental values are largely dispersed}[fig.30NCD16sn]
-	\graphfile*[52]{figures//NCD16_bt1D_sn.png}[Bending and torsion tests on 30NCD16(R=-1)]
-	\graphfile*[52]{figures//NCD16_bt2D_m_sn.png}[Bending-torsion tests with mean stress on 30NCD16]
-\end{Figure}
 
 \begin{Figure}[!h]{Calibration on  30NCD16 (\cite{Dubar1992}). In figure (c) data 29(same $N_F$ with data30 but with smaller $\sigma_{x,m}$) and 32(2-D with large mean stress)  from Tab.\ref{tab.30ncd16bt} are more dispersed. The numerical tests are carried out using the coefficients of Tab.\ref{30ncdpara2}}[fig.30NCD16err]
 	\graphfile*[52]{figures//NCD16_bt1D_err.png}[Bending and torsion tests on 30NCD16(R=-1)]
@@ -1829,13 +1646,6 @@ Although the uniaxial experimental data we extracted from Lee's curve (\cite{lee
 	\label{sm45cpara}
 \end{table}
 
-\begin{Figure}[!h]{Calibration on  SM45C}[fig.SM45C]
-	\graphfile*[52]{figures//SM45C_bt1D_sn.png}[Bending and torsion test on SM45C steel(R=-1)]
-	\graphfile*[52]{figures//SM45C_b1D_m_sn.png}[Bending test with mean stress on SM45C steel ($\sigma_m=196 MPa$)]
-	\\
-	\graphfile*[52]{figures//SM45C_bt2D90_sn.png}[Bending-torsion 90 degree out-of-phase tests on SM45C steel]
-	\graphfile*[52]{figures//SM45C_bt2D90_m_sn.png}[Bending-torsion 90 degree out-of-phase tests with mean stress on SM45C steel]
-\end{Figure}
 
 \begin{Figure}[!h]{Calibration on  SM45C. The numerical tests are carried out using the coefficients of Tab.\ref{sm45cpara}}[fig.SM45C]
 	\graphfile*[52]{figures//SM45C_bt1D_err.png}[Bending and torsion test on SM45C steel (R=-1)]
@@ -2030,7 +1840,7 @@ As the previous tests, we identify the slope $\beta$ in pure torsion tests witho
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		\textbf{$\beta$} & \textbf{$\lambda_+$} & \textbf{$\lambda_-$} & \textbf{$W_0$} & \textbf{$a$} & \textbf{$f$} \\ \hline
-		5.3    & 1.7 &0         &6.48E8 Pa  & 0.4   & 1.1 \\ \hline
+		5.3    & 1.7 &0         &3.22E7 Pa  & 0.01   & 1.1 \\ \hline
 	\end{tabular}
 	\caption{Model parameters for 10HNAP steel}
 	\label{tab.10HNAP.para}
@@ -2095,33 +1905,10 @@ The constant amplitude unidimensional tests data are show in Tab.\ref{tab.10HNAP
 
 
 After determining the parameters of the 10HNAP steel model for each of the batches tested, the number of priming cycles can be obtained by directly applying equation \eqref{eq.cycNF} for the proportional periodic loads of constant amplitude and for multiaxial loadings of variable amplitude.
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//10HNAP_b1D_m_Smax.png} 
-	\caption{$S_{a}$ of bending tests with mean stress on 10HNAP}
-	\label{fig.10HNAPSmax}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//10HNAP_b1D_m_hydro.png} 
-	\caption{$Hydro_{+-}$ of bending tests with mean stress on 10HNAP}
-	\label{fig.10HNAPhydro}
-\end{figure}
 
-In \figref{fig.10HNAP1} and \figref{fig.10HNAP2}, we give the prediction results of the torsion tests used to identify $\beta$ and $W_0$ of the model, then we use the bending with various mean stress to get the parameter $\lambda_+$. These are to be taken with caution because of the effect of the gradient because the specimens stressed in tension and in torsion are not of the same nature.
-%%-------------S_eq vs NF----------------------------
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//10HNAP_bt1D_sn.png} 
-	\caption{Bending and torsion test on 10HNAP steel(R=-1). Data are presented in Tab.\ref{tab.10HNAPbending} and  \ref{tab.10HNAPtorsion}. The torsion best fit and the bending numerical results(optimal time step of method 2 deduced in Chapter \ref{chp:5}) are obtained with the coefficients of Tab.\ref{tab.10HNAP.para}}
-	\label{fig.bt1D10HNAPsn}
-\end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=\textwidth]{figures//10HNAP_b1D_m_sn.png} 
-	\caption{Wöhler tensile curves for various mean stress values. Data are presented in Tab.\ref{tab.10HNAPmean} and results are obtained with the coefficients of Tab.\ref{tab.10HNAP.para}}
-	\label{fig.b1Dm10HNAPsn}
-\end{figure}
+
+We give the prediction results of the torsion tests used to identify $\beta$ and $W_0$ of the model, then we use the bending with various mean stress to get the parameter $\lambda_+$. These are to be taken with caution because of the effect of the gradient because the specimens stressed in tension and in torsion are not of the same nature.
+
 
 
 \begin{figure}[!h]

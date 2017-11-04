@@ -2,17 +2,65 @@ This is BibTeX, Version 0.99d (TeX Live 2014/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: A new.aux
 The style file: elsarticle-num.bst
-Illegal, another \bibstyle command---line 448 of file A new.aux
+Illegal, another \bibstyle command---line 343 of file A new.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
 Database file #1: 11.bib
 Warning--entry type for "zepeng" isn't style-file defined
---line 299 of file 11.bib
+--line 89 of file 11.bib
+I was expecting a `,' or a `}'---line 205 of file 11.bib
+ :  
+ :  year={2004}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 395 of file 11.bib
+ : @book{lemaitre1990mechanics
+ :                            ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 691 of file 11.bib
+ :  
+ :  @book{suresh1998fatigue,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1455 of file 11.bib
+ : \@article{Maitournam2011232
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1519 of file 11.bib
+ : @thesis{zepeng
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1535 of file 11.bib
+ : @book{lemaitre1990mechanics
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1587 of file 11.bib
+ : @article{Bosia201239
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1703 of file 11.bib
+ : @misc{legendre
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1715 of file 11.bib
+ : @article{Bedkowski1994
+ :                       ,
+I'm skipping whatever remains of this entry
 Warning--entry type for "VIDAL1996" isn't style-file defined
---line 413 of file 11.bib
-Warning--I didn't find a database entry for "EFATIGUE"
-Warning--I didn't find a database entry for "HUANG2017259"
+--line 1749 of file 11.bib
+Repeated entry---line 1817 of file 11.bib
+ : @article{Dubar1992
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1845 of file 11.bib
+ : @article{lee2013out
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2235 of file 11.bib
+ : @article{carpinteri2003multiaxial
+ :                                  ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in Bedkowski1994
 Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
 while executing---line 1495 of file elsarticle-num.bst
@@ -25,45 +73,45 @@ while executing---line 1495 of file elsarticle-num.bst
 Too many commas in name 1 of "ACHTELIC, H., BEDKOWSKY, W., GRZELAK, J., MACHA, E." for entry ACHTELIC1994
 while executing---line 1495 of file elsarticle-num.bst
 Warning--empty journal in ACHTELIC1994
-You've used 14 entries,
+You've used 16 entries,
             2937 wiz_defined-function locations,
-            766 strings with 8108 characters,
-and the built_in function-call counts, 3334 in all, are:
-= -- 301
-> -- 80
+            777 strings with 8522 characters,
+and the built_in function-call counts, 3867 in all, are:
+= -- 355
+> -- 91
 < -- 0
-+ -- 36
-- -- 22
-* -- 202
-:= -- 460
-add.period$ -- 16
-call.type$ -- 14
-change.case$ -- 15
++ -- 41
+- -- 25
+* -- 243
+:= -- 526
+add.period$ -- 19
+call.type$ -- 16
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 104
-empty$ -- 409
-format.name$ -- 28
-if$ -- 876
+cite$ -- 18
+duplicate$ -- 120
+empty$ -- 475
+format.name$ -- 32
+if$ -- 1021
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 11
-newline$ -- 55
-num.names$ -- 13
-pop$ -- 94
+int.to.str$ -- 16
+missing$ -- 12
+newline$ -- 63
+num.names$ -- 14
+pop$ -- 109
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 231
+skip$ -- 263
 stack$ -- 0
-substring$ -- 166
-swap$ -- 15
+substring$ -- 193
+swap$ -- 20
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 22
-width$ -- 16
-write$ -- 115
-(There were 6 error messages)
+while$ -- 24
+width$ -- 18
+write$ -- 133
+(There were 18 error messages)
